@@ -1,0 +1,66 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  color: #080808;
+  text-transform: uppercase;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #61aba1), color-stop(100%, #fbf6c6));
+  background-image: -moz-linear-gradient(#61aba1, #fbf6c6);
+  background-image: -webkit-linear-gradient(#61aba1, #fbf6c6);
+  background-image: linear-gradient(#61aba1, #fbf6c6);
+  background-attachment: fixed;
+  height: 100%;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h2 {
+	font-size: 18px;
+	margin-bottom: 8px;
+}
+
+.dark-purple {
+  background: #5e3577;
+}
+
+.light-blue {
+  background: #d2eaf5;
+}
+
+.purple {
+  background: #b02f7c;
+}
+
+.orange {
+  background: #fa811d;
+}
+
+.red {
+  background: #f50c2b;
+}
+
+.yellow {
+  background: #ffed20;
+}
+
+.green {
+  background: #41994e;
+}
+
+.dark-blue {
+  background: #5a6dba;
+}
+
+td {
+	font-size: 12px;
+	border: 1px solid black;
+	text-align: center;
+}

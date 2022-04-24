@@ -1,0 +1,90 @@
+/* deed */
+.deed {
+	border: 2px solid black;
+	width: 235px;
+	height: 300px;
+	background-color: rgba(19, 35, 47, 0.9);
+	z-index: 18;
+	-webkit-user-select: none;
+	user-select: none;
+	box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+.deed td{
+	border: none;
+}
+
+.deed-header {
+	width: 215px;
+	height: 48px;
+	border: 1px solid black;
+	margin: 9px;
+	margin-bottom: 1px;
+	background-color: yellow;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#deed-name {
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#deed-table {
+	margin: 5px;
+	width: 217px;
+	border-spacing: 1px;
+	color: white;
+}
+
+#deed-mortgaged {
+	font-size: 16px;
+	text-align: center;
+	color: white;
+}
+
+#deed-mortgaged-name {
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 20px 20px 20px;
+}
+
+#deed-special {
+	text-align: center;
+	color: white;
+}
+
+.deedSpecial .drawing {
+	font-size: 30px;
+	margin-top: 10px;
+}
+
+.deed-owner {
+	text-align: center;
+	color: white;
+	font-size: 15px;
+}
+
+#deed-special-name {
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	border-style: solid;
+	border-width: 2px 0px;
+	text-transform: uppercase;
+	margin: 10px 10px 10px;
+}
+
+#deed-special-text {
+	margin: 5px;
+	font-size: 15px;
+	text-align: justify;
+}
+
+#deed-special-footer {
+	margin: 10px;
+	width: 195px;
+	position: absolute;
+	font-size: 16px;
+}

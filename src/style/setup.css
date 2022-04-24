@@ -1,0 +1,308 @@
+/* this file styles the starting setup page */
+
+/* logo */
+.logo img {
+  display: block;
+  width: 60%;
+  margin-left: auto;
+  margin-top: 200px;
+  margin-right: auto;
+}
+
+
+
+/* popupbackground */
+.popupbackground {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background-color: #000000;
+	opacity: 0.5;
+	z-index: 10;
+}
+
+/* setupwrap */
+.setupwrap {
+	position: absolute;
+	top: 170px;
+	left: 0px;
+	width: 100%;
+	background-color: transparent;
+	z-index: 13;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+/* setup */
+.setup {
+	border-radius: 10px;
+	display: block;
+	margin: auto;
+	width: 1000px;
+	border: 2px solid black;
+	background-color: rgba(19, 35, 47, 0.9);
+	padding: 10px;
+  padding-bottom: 30px;
+	text-align: center;
+	z-index: 13;
+	color: white;
+	font-size: 16px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+/* range slider */
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 18px 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #f05454;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #f05454;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #f05454;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #f05454;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #f05454;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #f05454;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #f05454;
+}
+
+
+
+/* player-setup */
+.player-setup {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* playerNameSetup */
+.playerNameSetup {
+	margin-top: 1em;
+	display: inline-table;
+	font-size: 0.875em;
+	padding: 2px;
+	border-radius: 0.35em;
+	box-shadow: 0 0.5em 1.5em rgba(0,0,0,0.15);
+}
+
+/* textinput */
+.textinput {
+	font-size: 20px;
+  /*width: 100%;*/
+  height: 100%;
+  padding: 5px 10px;
+  background: none;
+  background-image: none;
+  border: 1px solid #a0b3b0;
+  color: #ffffff;
+  border-radius: 0;
+  -webkit-transition: border-color .25s ease, box-shadow .25s ease;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+/* colorPicker */
+
+.colorPicker {
+  margin-top: 1em;
+  font-size: 1em;
+  text-align: center;
+  display: inline-table;
+  width: 100%;
+  max-width: 20em;
+  background: rgba(19, 35, 47, 0.9);
+  padding: 2px;
+  border-radius: 0.35em;
+  box-shadow: 0 0.5em 1.5em rgba(0,0,0,0.15);
+}
+
+.colorPicker label {
+  -webkit-tap-highlight-color: rgba(255,255,255,0.5);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: table-cell;
+  cursor: pointer;
+  vertical-align: middle;
+  padding: 0.5em 1em;
+  letter-spacing: -0.5em;
+  color: transparent;
+  opacity: 0.35;
+  width: 1%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.1)), to(rgba(0,0,0,0.1)));
+  background-image: linear-gradient(rgba(255,255,255,0.1), rgba(0,0,0,0.1));
+}
+
+.colorPicker label.human {
+  background-color: grey;
+  -webkit-tap-highlight-color: grey;
+}
+
+.colorPicker label.ai {
+  background-color: black;
+  -webkit-tap-highlight-color: black;
+}
+
+.colorPicker label.red {
+  background-color: #ff3e05;
+  -webkit-tap-highlight-color: #ff3e05;
+}
+
+.colorPicker label.orange {
+  background-color: #ff8d05;
+  -webkit-tap-highlight-color: #ff8d05;
+}
+
+.colorPicker label.yellow {
+  background-color: #ecca05;
+  -webkit-tap-highlight-color: #ecca05;
+}
+
+.colorPicker label.green {
+  background-color: #40af04;
+  -webkit-tap-highlight-color: #40af04;
+}
+
+.colorPicker label.blue {
+  background-color: #057fff;
+  -webkit-tap-highlight-color: #057fff;
+}
+
+.colorPicker label.indigo {
+  background-color: #7500ca;
+  -webkit-tap-highlight-color: #7500ca;
+}
+
+.colorPicker label.brown {
+  background-color: #a44026;
+  -webkit-tap-highlight-color: #a44026;
+}
+
+.colorPicker label.violet {
+  background-color: #cc6fcc;
+  -webkit-tap-highlight-color: #cc6fcc;
+}
+
+.colorPicker label:first-of-type {
+  border-radius: 0.25em 0 0 0.25em;
+}
+
+.colorPicker label:last-of-type {
+  border-radius: 0 0.25em 0.25em 0;
+}
+
+.colorPicker label:hover {
+  opacity: 1;
+  color: #fff;
+  letter-spacing: normal;
+}
+
+.colorPicker input {
+  display: none;
+}
+.colorPicker input:checked + label {
+  width: 90%;
+  opacity: 1;
+  color: #fff;
+  letter-spacing: normal;
+}
+
+/* user icon */
+.playerNameSetup i {
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+/* start button */
+#startButton {
+  margin-top: 20px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: #1ab188;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+
+#startButton:hover, #startButton:focus{
+  background: #179b77;
+}

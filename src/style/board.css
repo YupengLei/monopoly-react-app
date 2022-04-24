@@ -1,0 +1,820 @@
+/* board */
+
+.table {
+  margin: 30px auto;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: 125px repeat(9, 80px) 125px;
+  grid-template-rows: 125px repeat(9, 80px) 125px;
+  grid-gap: 2px;
+  margin: 30px auto;
+  width: 994px;
+  height: 994px;
+  background-color: #080808;
+  border: 2px solid black;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.center {
+  grid-column: 2 / 11;
+  grid-row: 2 / 11;
+  background: #fafaf8;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  justify-items: center;
+  align-items: center;
+	background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzYxYWJhMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZiZjZjNiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #61aba1), color-stop(100%, #fbf6c6));
+  background-image: -moz-linear-gradient(#61aba1, #fbf6c6);
+  background-image: -webkit-linear-gradient(#61aba1, #fbf6c6);
+  background-image: linear-gradient(#61aba1, #fbf6c6);
+  background-attachment: fixed;
+  height: 100%;
+}
+
+.title {
+  grid-column: 1 / 9;
+  grid-row: 4;
+  font-size: 90px;
+  font-weight: 400;
+  letter-spacing: 12px;
+}
+
+.community-chest-deck {
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+  margin-bottom: 60px;
+  margin-right: 60px;
+}
+
+
+
+.chance-deck {
+  grid-column: 5 / 7;
+  grid-row: 5 / 7;
+  margin-top: 60px;
+  margin-left: 60px;
+}
+
+.label {
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 3px;
+  padding-bottom: 10px;
+}
+
+.deck {
+  border: 2px dashed #080808;
+  width: 160px;
+  height: 120px;
+  margin-bottom: 5px;
+}
+
+/* dashboard */
+#control-wrap {
+	grid-column: 1 / 9;
+  grid-row: 4;
+  background-color: transparent;
+	z-index: 13;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+#control {
+  overflow: hidden;
+	height: 260px;
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+  line-height: 1.5;
+  border: 2px solid black;
+  border-radius: 10px;
+	background-color: rgba(19, 35, 47, 0.9);
+  z-index: 13;
+	margin: auto;
+  -webkit-user-select: none;
+	user-select: none;
+	box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+#menu {
+	width: 380px;
+	height: 32px;
+	margin: 10px;
+}
+
+#menutable td {
+	vertical-align: top;
+}
+
+#menu a {
+	text-decoration: none;
+	display: block;
+	height: 100%;
+	width: 100%;
+	padding-top: 8px;
+}
+
+a {
+	color: #080808;
+}
+
+#quickstats {
+	font-size: 12px;
+	font-weight: bold;
+  color: #080808;
+	border: 2px solid black;
+	margin: 5px;
+	padding: 3px;
+	width: 108px;
+}
+
+/* trade */
+#trade {
+	/*width: 548px;
+	height: 240px;
+	margin: 15px auto;
+	border-radius: 15px;
+	padding: 10px;
+	z-index: 14;
+	box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+	overflow: hidden;*/
+  overflow: hidden;
+	height: 260px;
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+  line-height: 1.5;
+  border: 2px solid black;
+  border-radius: 10px;
+	background-color: rgba(19, 35, 47, 0.9);
+  z-index: 13;
+	margin: auto;
+  -webkit-user-select: none;
+	user-select: none;
+	box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+#trade-leftp-property, #trade-rightp-property {
+	width: 255px;
+	height: 100px;
+	overflow: scroll;
+
+}
+
+#trade-leftp-name {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.trade-cell i {
+  font-size: 20px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.trade-cell span {
+  color: #080808;
+  padding-left: 5px;
+  padding-right: 5px;
+ 
+}
+
+
+#trade-rightp-name select {
+  /*background: inherit;
+  padding: 5px;
+  width: 200px;*/
+  border: none;
+  font-size: 13px;
+	font-weight: bold;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+	text-transform: uppercase;
+}
+
+#trade-leftp-money {
+	width: 90%;
+}
+
+#trade-rightp-money {
+	width: 90%;
+}
+
+.trade-cell {
+	border: none;
+	border-radius: 3px;
+	/*width: 308px;
+	height: 26px;*/
+	vertical-align: middle;
+}
+
+#buyConfirmButton, #proposetradebutton, #canceltradebutton, #accepttradebutton, #rejecttradebutton, #pay50, #mortgagebutton, #gojfbutton, #buyhousebutton, #sellhousebutton {
+  margin-left: 5px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0;
+  padding: 5px;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhZjBjZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y5ZWNiZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #faf0cd), color-stop(100%, #f9ecbf));
+  background-image: -moz-linear-gradient(#faf0cd, #f9ecbf);
+  background-image: -webkit-linear-gradient(#faf0cd, #f9ecbf);
+  background-image: linear-gradient(#faf0cd, #f9ecbf);
+  -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 1px 0 3px, rgba(0, 0, 0, 0.5) 0 0 0 3px, rgba(0, 0, 0, 0.2) 0 0 0 0;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 1px 0 3px, rgba(0, 0, 0, 0.5) 0 0 0 3px, rgba(0, 0, 0, 0.2) 0 0 0 0;
+  box-shadow: rgba(255, 255, 255, 0.3) 0 1px 0 3px, rgba(0, 0, 0, 0.5) 0 0 0 3px, rgba(0, 0, 0, 0.2) 0 0 0 0;
+  -moz-transition: all, 200ms;
+  -o-transition: all, 200ms;
+  -webkit-transition: all, 200ms;
+  transition: all, 200ms;
+  border: none;
+  border-radius: 4px;
+  bottom: 0;
+  color: #808080;
+
+}
+
+#buyConfirmButton:hover, #proposetradebutton:hover, #canceltradebutton:hover, #accepttradebutton:hover, #rejecttradebutton:hover, #pay50:hover, #mortgagebutton:hover, #gojfbutton:hover, #buyhousebutton:hover, #sellhousebutton:hover {
+background: transparent;
+
+}
+
+#buyConfirmButton:disabled, #proposetradebutton:disabled, #canceltradebutton:disabled, #accepttradebutton:disabled, #rejecttradebutton:disabled, #pay50:disabled, #mortgagebutton:disabled, #gojfbutton:disabled, #buyhousebutton:disabled, #sellhousebutton:disabled {
+cursor: not-allowed;
+}
+
+#landed {
+	padding: 10px;
+	border: 1px solid gray;
+	border-top: none;
+	width: 380px;
+	height: 70px;
+	margin-left: 10px;
+	text-align: left;
+}
+
+#alert {
+	text-align: left;
+	width: 380px;
+	height: 92px;
+	margin-top: 20px;
+	margin-left: 10px;
+	padding: 10px;
+	border: 1px solid gray;
+	font-size: 13px;
+	background-color: transparent;
+	overflow-y: scroll;
+}
+
+#option {
+	border: 1px solid grey;
+	border-top: none;
+	vertical-align: middle;
+	padding: 3px;
+	text-align: center;
+	margin-left: 10px;
+	width: 380px;
+  height: 70px;
+}
+
+#buildings {
+	margin: 10px;
+	height: 21px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#owned {
+	width: 380px;
+	height: 92px;
+	margin-top: 20px;
+	margin-left: 10px;
+	padding: 3px 0px;
+	border: 1px solid gray;
+	text-align: center;
+	font-size: 13px;
+	overflow-y: scroll;
+}
+
+.propertycellcheckbox {
+	width: 20px;
+	height: 20px;
+	border: none;
+	vertical-align: middle;
+}
+
+.propertycellcolor {
+	padding: 0px;
+	width: 20px;
+	height: 20px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: white;
+}
+
+.propertycellname {
+	height: 20px;
+	width: 250px;
+	border: none;
+	cursor: default;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.propertycelldeed {
+	width: 18px;
+	height: 20px;
+	border: 1px solid grey;
+	cursor: pointer;
+	display: none;
+}
+
+#buildings {
+	margin: 10px;
+	height: 21px;
+	font-size: 20px;
+	font-weight: bold;
+
+}
+
+.fa-home {
+	color: orange;
+}
+
+.fa-building {
+	color: greenyellow;
+}
+
+
+/* space */
+.space {
+  background: #fafaf8;
+  text-align: center;
+	background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzYxYWJhMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZiZjZjNiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #61aba1), color-stop(100%, #fbf6c6));
+  background-image: -moz-linear-gradient(#61aba1, #fbf6c6);
+  background-image: -webkit-linear-gradient(#61aba1, #fbf6c6);
+  background-image: linear-gradient(#61aba1, #fbf6c6);
+  background-attachment: fixed;
+  height: 100%;
+}
+
+.space .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transform-origin: center;
+  height: 125px;
+  width: 80px;
+}
+
+.space .name,
+.space .instructions {
+  padding-left: 15px;
+  padding-right: 15px;
+	line-height: 100%;
+}
+
+.space .price {
+  font-size: 10px;
+  font-weight: 400;
+  padding-bottom: 5px;
+}
+
+.corner .container {
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+}
+
+.corner .name {
+  padding: 0;
+}
+
+.railroad .name {
+  padding-top: 10px;
+}
+.railroad .drawing {
+  font-size: 30px;
+  color: #cc6fcc;
+}
+
+.utility .name {
+  padding-top: 10px;
+}
+.utility .drawing {
+  font-size: 30px;
+}
+
+.fee .name {
+  padding-top: 10px;
+  font-size: 14px;
+}
+.fee .instructions {
+  font-size: 10px;
+}
+
+.go {
+  grid-column: 11;
+  grid-row: 11 / 12;
+  position: relative;
+}
+
+.go .container {
+  justify-content: flex-start;
+  transform: rotate(315deg);
+
+}
+.go .instructions {
+  padding: 0 30px;
+}
+.go .go-word {
+  font-size: 40px;
+  color: #f50c2b;
+}
+.go .arrow {
+  font-size: 40px;
+  color: #f50c2b;
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+}
+
+.go .fas {
+  font-size: 20px;
+  color: #f50c2b;
+  position: relative;
+  bottom: 30px;
+}
+
+.jail {
+  position: relative;
+  grid-column: 1;
+  grid-row: 11 / 12;
+  display: grid;
+  grid-template-columns: repeat(10, 12.5px);
+  grid-template-rows: repeat(10, 12.5px);
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.jail .drawing {
+  grid-column: 4 / 11;
+  grid-row: 1 / 8;
+  width: 87.5px;
+  height: 87.5px;
+  border-bottom: 2px solid #080808;
+  border-left: 2px solid #080808;
+}
+
+.jail .just {
+  grid-column: 2;
+  grid-row: 2;
+  transform: rotate(90deg);
+  padding-top: 5px;
+  font-size: 12px;
+}
+.jail .visiting {
+  grid-column: 2;
+  grid-row: 9;
+  padding-top: 5px;
+}
+.jail .container {
+  align-items: center;
+  transform: rotate(45deg);
+}
+.jail .name {
+  font-size: 14px;
+}
+.jail .window {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  width: 55px;
+  height: 55px;
+  background: #fafaf8;
+  border: 2px solid #080808;
+}
+.jail .person {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 35%;
+  left: 25%;
+  font-size: 25px;
+	color: #fa811d;
+}
+.jail .bar {
+  height: 55px;
+  width: 2px;
+  background: #080808;
+}
+
+.free-parking {
+  grid-column: 1;
+  grid-row: 1 / 2;
+}
+.free-parking .container {
+  justify-content: center;
+  transform: rotate(135deg);
+}
+.free-parking .name {
+  font-size: 16px;
+}
+.free-parking .drawing {
+  font-size: 60px;
+  color: #f50c2b;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.go-to-jail {
+  grid-column: 11;
+  grid-row: 1 / 1;
+}
+.go-to-jail .container {
+  justify-content: center;
+  transform: rotate(225deg);
+}
+.go-to-jail .name {
+  font-size: 16px;
+}
+.go-to-jail .drawing {
+  font-size: 60px;
+  color: #640303;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.row {
+  display: grid;
+  grid-gap: 2px;
+}
+
+.horizontal-row {
+  grid-template-columns: repeat(9, 80px);
+  grid-template-rows: 125px;
+}
+
+.vertical-row {
+  grid-template-columns: 125px;
+  grid-template-rows: repeat(9, 80px);
+}
+
+.vertical-row .container {
+  top: 50%;
+  left: 50%;
+
+}
+
+.bottom-row {
+  grid-column: 2 / 11;
+  grid-row: 11;
+}
+
+.left-row {
+  grid-column: 1;
+  grid-row: 2 / 11;
+}
+
+.left-row .container {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.top-row {
+  grid-column: 2 / 11;
+  grid-row: 1;
+}
+.top-row .container {
+  transform: rotate(180deg);
+}
+
+.right-row {
+  grid-column: 11;
+  grid-row: 2 / 11;
+}
+.right-row .container {
+  transform: translate(-50%, -50%) rotate(270deg);
+}
+
+.property .color-bar {
+  height: 25px;
+  border-bottom: 2px solid #080808;
+}
+
+.chance .name {
+	margin-top: 20px;
+}
+
+.chance .drawing {
+  font-size: 40px;
+  color: #f50c2b;
+}
+.chance .blue {
+  color: #5a6dba;
+}
+
+.community-chest .container {
+  justify-content: space-around;
+
+}
+
+.community-chest .drawing {
+  font-size: 30px;
+  color: gray;
+}
+.community-chest .instructions {
+  font-size: 8px;
+}
+
+.electric-company .drawing {
+  color: #ffed20;
+}
+
+.waterworks .drawing {
+  color: #5a6dba;
+}
+
+/*.income-tax .container {
+  justify-content: center;
+  align-items: center;
+}
+.income-tax .name {
+  padding-bottom: 5px;
+}*/
+.income-tax .drawing {
+  font-size: 30px;
+	color: #41994e;
+}
+.income-tax .instructions {
+  /*padding-top: 5px;*/
+  padding-bottom: 5px;
+}
+
+.luxury-tax .drawing {
+  font-size: 30px;
+	color: #5e3577;
+}
+.luxury-tax .instructions {
+  padding-bottom: 5px;
+}
+
+.die {
+	margin-top: 5px;
+	font-size: 60px;
+}
+
+td {
+	font-size: 12px;
+	border: 1px solid black;
+	text-align: center;
+}
+
+.property .fas {
+  font-size: 20px;
+  bottom: 5px;
+  position: relative;
+}
+
+.income-tax .fas {
+  font-size: 20px;
+  bottom: 5px;
+  position: relative;
+}
+
+.railroad .fas {
+  font-size: 20px;
+  bottom: 5px;
+  position: relative;
+}
+
+.chance .fas {
+  font-size: 20px;
+  bottom: 5px;
+  position: relative;
+}
+
+.community-chest .fas {
+  font-size: 20px;
+  bottom: 5px;
+  position: relative;
+}
+
+.visiting .fas {
+  font-size: 20px;
+  bottom: 5px;
+  position: relative;
+}
+
+.utility .fas {
+  font-size: 20px;
+  bottom: 5px;
+  position: relative;
+}
+
+
+.free-parking .fas {
+  font-size: 20px;
+  bottom: 5px;
+  position: relative;
+}
+
+.go-to-jail .fas {
+  font-size: 20px;
+  bottom: 5px;
+  position: relative;
+}
+
+.display-linebreak {
+  white-space: pre-line;
+}
+
+#buyConfirmButton, #proposetradebutton, #canceltradebutton, #accepttradebutton, #rejecttradebutton, #pay50, #mortgagebutton, #gojfbutton, #buyhousebutton, #sellhousebutton {
+  margin-left: 5px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0;
+  padding: 5px;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhZjBjZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y5ZWNiZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+background-size: 100%;
+background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #faf0cd), color-stop(100%, #f9ecbf));
+background-image: -moz-linear-gradient(#faf0cd, #f9ecbf);
+background-image: -webkit-linear-gradient(#faf0cd, #f9ecbf);
+background-image: linear-gradient(#faf0cd, #f9ecbf);
+-moz-box-shadow: rgba(255, 255, 255, 0.3) 0 1px 0 3px, rgba(0, 0, 0, 0.5) 0 0 0 3px, rgba(0, 0, 0, 0.2) 0 0 0 0;
+-webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 1px 0 3px, rgba(0, 0, 0, 0.5) 0 0 0 3px, rgba(0, 0, 0, 0.2) 0 0 0 0;
+box-shadow: rgba(255, 255, 255, 0.3) 0 1px 0 3px, rgba(0, 0, 0, 0.5) 0 0 0 3px, rgba(0, 0, 0, 0.2) 0 0 0 0;
+-moz-transition: all, 200ms;
+-o-transition: all, 200ms;
+-webkit-transition: all, 200ms;
+transition: all, 200ms;
+border: none;
+border-radius: 4px;
+bottom: 0;
+color: #808080;
+
+}
+
+#buyConfirmButton:hover, #proposetradebutton:hover, #canceltradebutton:hover, #accepttradebutton:hover, #rejecttradebutton:hover, #pay50:hover, #mortgagebutton:hover, #gojfbutton:hover, #buyhousebutton:hover, #sellhousebutton:hover {
+background: transparent;
+
+}
+
+#buyConfirmButton:disabled, #proposetradebutton:disabled, #canceltradebutton:disabled, #accepttradebutton:disabled, #rejecttradebutton:disabled, #pay50:disabled, #mortgagebutton:disabled, #gojfbutton:disabled, #buyhousebutton:disabled, #sellhousebutton:disabled {
+cursor: not-allowed;
+}
+
+#buyConfirm {
+height: 10px;
+padding: 5px;
+}
+
+#menuButton {
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  /*letter-spacing: 0.1em;*/
+  background: #1ab188;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+
+#menuButton, #optionButton:hover, #menuButton, #optionButton:focus{
+  background: #179b77;
+}
+
+#optionButton {
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: #1ab188;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+  margin: 5px;
+}
