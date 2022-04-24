@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/monopoly-react-app/static/css/main.4f7a65f8.chunk.css",
+    "main.js": "/monopoly-react-app/static/js/main.95b61237.chunk.js",
+    "main.js.map": "/monopoly-react-app/static/js/main.95b61237.chunk.js.map",
+    "runtime-main.js": "/monopoly-react-app/static/js/runtime-main.b3b686f6.js",
+    "runtime-main.js.map": "/monopoly-react-app/static/js/runtime-main.b3b686f6.js.map",
+    "static/js/2.6233cab1.chunk.js": "/monopoly-react-app/static/js/2.6233cab1.chunk.js",
+    "static/js/2.6233cab1.chunk.js.map": "/monopoly-react-app/static/js/2.6233cab1.chunk.js.map",
+    "index.html": "/monopoly-react-app/index.html",
+    "static/css/main.4f7a65f8.chunk.css.map": "/monopoly-react-app/static/css/main.4f7a65f8.chunk.css.map",
+    "static/js/2.6233cab1.chunk.js.LICENSE.txt": "/monopoly-react-app/static/js/2.6233cab1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b3b686f6.js",
+    "static/js/2.6233cab1.chunk.js",
+    "static/css/main.4f7a65f8.chunk.css",
+    "static/js/main.95b61237.chunk.js"
+  ]
+}
